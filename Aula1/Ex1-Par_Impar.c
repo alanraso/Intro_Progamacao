@@ -1,3 +1,7 @@
+/*
+  Dado um número inteiro como entrada, imprimir se ele é par ou ímpar.
+*/
+
 #include <stdio.h>
 #include <locale.h>
 
