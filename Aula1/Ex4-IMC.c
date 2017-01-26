@@ -1,5 +1,6 @@
 /*
-  Dados o peso e a altura de uma pessoa, dizer qual o estado de obesidade baseada no IMC e nas faixas de valores abaixo:
+  Dados o peso e a altura de uma pessoa, dizer qual o estado de obesidade baseada no IMC e nas faixas de valores abaixo.
+  O IMC é calculado como peso dividido por altura ao quadrado.
 
           Condição              IMC
 ---------------------------------------------
