@@ -1,0 +1,28 @@
+int num;
+
+entrada(num);
+imprime(num);
+
+===================================================================================================================
+
+Programa que recebe um numero e imprime seu valor multiplicado por 7:
+
+int num;
+
+entrada(num);
+num <- num*7;
+imprime(num);
+
+===================================================================================================================
+
+Programa que recebe notas bimestrais e calcula a média (cada um pro seu de novo):
+
+int b1, b2, b3, b4, media;
+
+imprime("Entre com as medias bimestrais:")
+entrada(b1);
+entrada(b2);
+entrada(b3);
+entrada(b4);
+
+media <- (2*b1 + 2*b2 + 3*b3 + 3*b4)/10

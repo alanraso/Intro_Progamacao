@@ -1,0 +1,24 @@
+Programa que recebe um número inteiro de anos e imprime quantas horas há nesses anos:
+
+int anos, horas;
+
+imprime("Entre com um numero inteiro de anos:");
+entrada(anos);
+
+horas <- anos*365*24;
+
+imprime("São {horas} horas.");
+
+======================================================================================================================================================
+
+Programa que recebe dois números reais e calcula a soma dos seus quadrados;
+
+float num1, num2, res;
+
+imprime("Entre com os catetos:");
+entrada(num1);
+entrada(num2);
+
+res <- num1*num1 + num2*num2;
+
+imprime("A soma dos quadrados eh {res}.");

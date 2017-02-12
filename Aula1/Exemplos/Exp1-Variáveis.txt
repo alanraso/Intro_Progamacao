@@ -1,0 +1,17 @@
+int a;
+int num;
+
+float x; (double x;)
+
+bool acertou;
+
+char c;
+
+a <- 30;
+num <- -5;
+
+x <- 2.7;
+
+acertou <- false;
+
+c <- 'r';
