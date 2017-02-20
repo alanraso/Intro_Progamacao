@@ -48,21 +48,44 @@ void jogada(int lin, int col, int M[5][5]){
     }
 }
 
-int main (){
-    int tam=5;
-    int M[5][5]={1,1,0,0,1,0,0,1,1,0,0,0,0,1,0,1,0,0,1,0,0,1,1,0,0};
+bool fimDoJogo(int M[5][5], int tam){
+    int i=0, j=0;
 
+    for(i; i<tam; i++){
+        for (j=0; j<tam; j++){
+            if (M[i][j]==1){
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
+int main (){
+    int tam=5, lin, col;
+    bool fim=false, desistiu=false;
+    int M[5][5]={0,1,1,0,0,1,0,0,1,1,1,0,0,0,0,0,1,0,1,0,0,1,0,0,1};
+
+    printf("Começo do jogo\n");
     printTable(M, tam);
-    jogada(1,1,M);
-    printTable(M, tam);
-    jogada(1,5,M);
-    printTable(M, tam);
-    jogada(5,1,M);
-    printTable(M, tam);
-    jogada(5,5,M);
-    printTable(M, tam);
-    jogada(2,3,M);
-    printTable(M, tam);
+
+    while(!fim && !desistiu){
+        printf("\nFaça sua jogada! Digite a linha e a coluna. (0 0 para desistir)");
+        scanf("%d %d",&lin, &col);
+        printf("\n\n");
+        if (lin==0 && col==0){
+            desistiu=true;
+            printf("Ah, que pena... :/");
+        }else{
+            jogada(lin, col, M);
+            printTable(M, tam);
+            if (fimDoJogo(M, tam)){
+                fim=true;
+                printf("Parabens!! Voce conseguiu!! =D");
+            }
+        }
+    }
 
     return 0;
 }
