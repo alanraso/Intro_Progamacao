@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -73,18 +74,16 @@ int main (){
     while(!fim && !desistiu){
         printf("\nFaça sua jogada! Digite a linha e a coluna. (0 0 para desistir)");
         scanf("%d %d",&lin, &col);
-        if (lin>=0 && col>=0 && lin<=5 && col<=5){
-            printf("\n\n");
-            if (lin==0 && col==0){
+        if (lin==0 && col==0){
                 desistiu=true;
                 printf("Ah, que pena... :/\n");
-            }else{
-                jogada(lin, col, M);
-                printTable(M, tam);
-                if (fimDoJogo(M, tam)){
-                    fim=true;
-                    printf("\n*** Parabens!! Voce conseguiu!! =D ***\n");
-                }
+        }else if (lin>0 && col>0 && lin<=5 && col<=5){
+            printf("\n\n");
+            jogada(lin, col, M);
+            printTable(M, tam);
+            if (fimDoJogo(M, tam)){
+                fim=true;
+                printf("\n*** Parabens!! Voce conseguiu!! =D ***\n");
             }
         }else{
             printf("\nJogada invalida\n");
